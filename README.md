@@ -2,7 +2,7 @@
 
 ### 〇概要
 RecordTalkIdeasはこちらから閲覧できます。  
-https://recordideas.herokuapp.com/  
+https://recordtalkideas.herokuapp.com  
 
 ※テストアカウント  
 メールアドレス：aaa@gmail.com  
