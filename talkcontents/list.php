@@ -162,7 +162,6 @@ $good_records=$getgood->fetchAll();
         <form method="post" name="form2" action="./list.php?category=<?=$category_id?>&page=<?=$page+1?>">
           <input type="hidden" name="sort" value=<?=$sort?>>
           <a href="javascript:form2.submit()">次へ</a>
-          <?=$count?>
         </form>
       <?php endif?>
     </div>
