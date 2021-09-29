@@ -158,7 +158,7 @@ $good_records=$getgood->fetchAll();
         </form>
       <?php endif?>
       
-      <?php if($page!=$maxpage || $count!=0):?>
+      <?php if($page!=$maxpage && $count!=0):?>
         <form method="post" name="form2" action="./list.php?category=<?=$category_id?>&page=<?=$page+1?>">
           <input type="hidden" name="sort" value=<?=$sort?>>
           <a href="javascript:form2.submit()">次へ</a>
