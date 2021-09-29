@@ -43,7 +43,7 @@ OS : mac
 → 会話の内容作成、編集、消去画面  
 
 
-##ユーザ登録画面  
+## ユーザ登録画面  
 
 氏名、メールアドレス、パスワード、性別、年齢を入力してユーザ登録を行います。  
 <img width="1440" alt="スクリーンショット 2021-09-29 20 47 18" src="https://user-images.githubusercontent.com/91469826/135262973-87266408-66ae-4e00-a57a-bf4201683c17.png">
@@ -52,14 +52,14 @@ OS : mac
 <img width="1440" alt="スクリーンショット 2021-09-29 20 47 52" src="https://user-images.githubusercontent.com/91469826/135263907-5a789aa2-90d6-4f23-9778-a8b62d70c02d.png">
 
 
-##ログイン画面
+## ログイン画面
 
 ※自動ログインにチェックを入れると、
 ブラウザを閉じた際にセッションが切れてもログイン状態が保持される。
 <img width="1440" alt="スクリーンショット 2021-09-29 20 46 57" src="https://user-images.githubusercontent.com/91469826/135263130-b50d5967-3535-4308-9803-d4ea04145ef8.png">
 
 
-##ジャンル選択画面
+## ジャンル選択画面
 ピンクのボタンを押すタイトル一覧に進みます。  
 ジャンル３とジャンル４は予備です。いつか追加するかも.....  
 <img width="1440" alt="スクリーンショット 2021-09-29 20 49 15" src="https://user-images.githubusercontent.com/91469826/135263180-44ab0c02-de68-4580-afc4-4b89a8032369.png">
@@ -69,7 +69,7 @@ OKを押すと、ログアウトが実行されログイン画面に戻ります
 <img width="501" alt="スクリーンショット 2021-09-29 20 49 40" src="https://user-images.githubusercontent.com/91469826/135264090-b91a433f-c068-4535-8a0a-af5958fbf071.png">
 
 
-##タイトル一覧画面
+## タイトル一覧画面
 <img width="1435" alt="スクリーンショット 2021-09-29 20 55 20" src="https://user-images.githubusercontent.com/91469826/135263596-efd652d6-b29f-4021-9fd2-ee3a05438ed3.png">
 
 
@@ -87,13 +87,13 @@ OKを押すと、ログアウトが実行されログイン画面に戻ります
 
 
 
-##タイトル作成画面
+## タイトル作成画面
 <img width="1437" alt="スクリーンショット 2021-09-29 20 40 54" src="https://user-images.githubusercontent.com/91469826/135263830-e7df3b32-3f02-4402-a7c0-4a7af6334cd7.png">
 
 
 
 
-##会話内容作成画面
+## 会話内容作成画面
 <img width="1440" alt="スクリーンショット 2021-09-29 20 45 23" src="https://user-images.githubusercontent.com/91469826/135263859-f303d1d7-9d76-4349-9a7a-565685385e25.png">
 
 
