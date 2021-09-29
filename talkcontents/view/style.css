@@ -1,0 +1,117 @@
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header{
+   width:100%;
+ }
+ 
+ .container{
+   width:90%;
+   margin:0 auto;
+ }
+ 
+ .opp-name{
+   float:left;
+ }
+ 
+ .talk-info{
+   background-color:#FFFF99;
+   height:65px;
+   width:100%;
+ }
+ 
+ .talk-info a{
+   display:block;
+   float:left;
+   height:100%;
+   padding:0 18px;
+   transition:0.5s;
+ }
+
+ .talk-info span{
+   line-height:60px;
+ }
+ 
+ .talk-info a:hover{
+   background-color:#EEEEEE;
+ }
+ 
+ .talk-info p{
+   text-align:center;
+   line-height:4;
+   color:black;
+   font-size:16px;
+ }
+ 
+ .icon{
+   margin:5px;
+ }
+ 
+ .my-icon{
+   float:right;
+   border:double #3366FF 2px;
+ }
+ 
+ .opp-icon{
+   float:left;
+   border:double #FF33FF 2px;
+ }
+ 
+ .talk-wrapper{
+   margin-top:20px;
+   margin-bottom:200px;
+ }
+ 
+ .talk-contents{
+   width:70%;
+   margin:5px 0;
+   padding:5px;
+   word-wrap: break-word;
+   border-radius:10px;
+ }
+
+ .talk-contents a{
+   font-size:12px;
+ }
+
+ 
+ .my-text{
+   background-color:#CCFFFF;
+   float:right;
+   font-size:13px;
+   border:solid #3366FF 1px;
+ }
+ 
+ .opp-text{
+   background-color:#FFCCFF;
+   float:left;
+   font-size:13px;
+   border:solid #FF33FF 1px;
+ }
+ 
+ .input-wrapper{
+   width:100%;
+   position:fixed;
+   bottom:0;
+   left:0;
+   z-index:0;
+   padding:10px 0;
+   background-color:#DDDDDD;
+ }
+ 
+ .input-text{
+   width:100%;
+ }
+ 
+ .which{
+   margin-top:10px;
+   float:left;
+ }
+ 
+ .btn{
+   margin-top:10px;
+   float:right;
+ }
