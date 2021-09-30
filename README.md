@@ -4,7 +4,7 @@
 ネットワーク関連の知識を1から身に着けたかったので、webアプリを作成してみました。  
 基礎を学ぶためにフレームワークは使わず、純粋なPHPのみ使ってコーディングしました。  
 
-RecordTalkIdeasはこちらから閲覧できます。  
+__RecordTalkIdeas__はこちらから閲覧できます。  
 ↓↓↓  
 https://recordtalkideas.herokuapp.com  
 
