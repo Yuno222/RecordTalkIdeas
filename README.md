@@ -47,7 +47,7 @@ OS : mac
 
 氏名、メールアドレス、パスワード、性別、年齢を入力してユーザ登録を行います。  
 
-<img width="1000" alt="スクリーンショット 2021-09-29 20 47 18" src="https://user-images.githubusercontent.com/91469826/135262973-87266408-66ae-4e00-a57a-bf4201683c17.png">  
+<img width="1440" alt="スクリーンショット 2021-09-29 20 47 18" src="https://user-images.githubusercontent.com/91469826/135262973-87266408-66ae-4e00-a57a-bf4201683c17.png">  
 
 
 記入漏れがあると、エラーを返します。  
