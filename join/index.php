@@ -107,7 +107,7 @@ if($_GET["state"]==="rewrite"){
         <select name="age">
             <option value="none">-</option>
             <?php for($i=1;$i<=100;$i++):?>
-                <option value="<?php echo $i?>" <?=h($_POST["age"])!=$i?:"selected"?>><?php echo $i?></option>
+                <option value="<?=$i?>" <?=h($_POST["age"])!=$i?:"selected"?>> <?=$i?></option>
             <?php endfor;?>
         </select>
         </p></li>
