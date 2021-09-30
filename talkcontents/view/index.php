@@ -24,8 +24,8 @@ if(!empty($_GET["idea"])){
 $getinfo="category=$category_id&idea=$idea_id";
 
 
-//テキストが送信されてきた場合
-if(!empty($_POST["input-text"])){
+//テキストが送信されてきた場合、ワンタイムトークンを比較して登録処理
+if(!empty($_POST["input-text"]) && isset($_POST["token"]) && $_SESSION["token"]==$_POST["token"]){
     try{
         $db->beginTransaction();
 
@@ -54,6 +54,10 @@ if(!empty($_POST["input-text"])){
     header("Location:index.php?$getinfo");
     exit();
 }
+
+//CSRF対策トークン生成
+$token=bin2hex(random_bytes(32));
+$_SESSION["token"]=$token;
 
 //トークデータ取得
 $talk_contents=$db->prepare('SELECT id, talk_text, speaker FROM talks WHERE idea_id=? ORDER BY created ASC');
@@ -111,6 +115,7 @@ $talks=$talk_contents->fetchAll();
           <input type="radio" name="which" value=0 checked>自分
           <input type="radio" name="which" value=1>相手
           <input class="btn" type="submit" value="決定" >
+          <input type="hidden" name="token" value="<?=$token?>">
         </form>
       </div>
     </div>
