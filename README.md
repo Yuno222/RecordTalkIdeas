@@ -5,7 +5,7 @@
 基礎を学ぶためにフレームワークは使わず、純粋なPHPのみ使ってコーディングしました。  
 
 RecordTalkIdeasはこちらから閲覧できます。  
-↓↓↓　　
+↓↓↓  
 https://recordtalkideas.herokuapp.com  
 
 ※テストアカウント  
