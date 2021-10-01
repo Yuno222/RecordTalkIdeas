@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+//クリックジャッキング対策
+header("X-FRAME-OPTIONS: DENY");
+
 if(empty($_SESSION["token"]) || $_SESSION["token"]!=$_GET["key"]){
     header("Location:index.php");
 }
