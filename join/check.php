@@ -3,10 +3,15 @@
         return htmlspecialchars($str,ENT_QUOTES,"UTF-8");
     }
 
-    require('../dbconnect.php');
     session_start();
+    require('../dbconnect.php');
+    
+    //クリックジャッキング対策
+    header("X-FRAME-OPTIONS: DENY");
 
+    //　前ページでセッションに保存したトークンを取得
     $token=$_SESSION["token"];
+
     //トークンチェック
     if($token!=$_GET["key"] || empty($_SESSION["token"]) || empty($_SESSION["user_info"])){
         header("Location:index.php");
