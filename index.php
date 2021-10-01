@@ -3,6 +3,9 @@ session_start();
 require('./dbconnect.php');
 require('./function.php');
 
+//クリックジャッキング対策
+header("X-FRAME-OPTIONS: DENY");
+
 //セッションにuseridが保存されている時は、自動でログイン
 if(isset($_SESSION["user_id"])){
   header("Location:./talkcontents/index.php");
