@@ -28,8 +28,7 @@ iPhoneのメモ帳に会話の内容を殴り書きしているのを目撃し�
 - progate
 - Udemy
 - Qiita
-- Google検索
-<br/>
+- Google検索  
 ## 〇環境
 OS : mac  
 エディタ : Visual Studio Code  
