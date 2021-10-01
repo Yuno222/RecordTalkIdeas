@@ -3,6 +3,9 @@ session_start();
 require('../dbconnect.php');
 require('../function.php');
 
+//クリックジャッキング対策
+header("X-FRAME-OPTIONS: DENY");
+
 //直リンク対策トークン生成
 $token=bin2hex(random_bytes(32));
 $_SESSION["token"]=$token;
