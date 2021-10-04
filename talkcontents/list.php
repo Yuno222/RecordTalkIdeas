@@ -32,9 +32,6 @@ if(!empty($_POST["sort"])){
 //検索する文字列
 if(!empty($_POST["search"])){
     $search=h($_POST["search"]);
-    $abc="abc";
-    if(strpos($abc,$search) !== false){
-      echo "yes";
     }
 }
 
