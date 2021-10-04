@@ -26,14 +26,14 @@ $category_data=$getname->fetch();
 
 //並び替えの種類
 if(!empty($_POST["sort"])){
-    h($sort=$_POST["sort"]);
+    $sort=h($_POST["sort"]);
 }
 
 //検索する文字列
 if(!empty($_POSR["search"])){
-    h($search=$_POST["search"]);
+    $search=h($_POST["search"]);
+    $search = "%".$search."%";
 }
-$search = "%".$search."%";
 
 //アイディア数取得
 $getcount=$db->prepare('SELECT count(*) as cnt FROM ideas WHERE category_id=? AND member_id=?');
