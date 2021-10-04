@@ -30,7 +30,7 @@ if(!empty($_POST["sort"])){
 }
 
 //検索する文字列
-if(!empty($_POSR["search"])){
+if(!empty($_POST["search"])){
     $search=h($_POST["search"]);
 }
 
@@ -125,12 +125,11 @@ $good_records=$getgood->fetchAll();
                 <option value="self_evaluate" <?= $sort != 'self_evaluate' ?: 'selected' ?>>評価順</option>
                 <option value="modified" <?= $sort != 'modified' ?: 'selected' ?>>更新順</option>
             </select>
-            <input type="submit" value="並び替え">
-         </form>
-          
-         <form action="./list.php?category=<?php echo $category_id?>" method="post">
-            <input type="text" name="search"　maxlength="10" placeholder="タイトルを検索">
+           
+           　　<input type="text" name="search"　maxlength="10" placeholder="タイトルを検索">
             <input type="submit" value="検索">
+           
+            <input type="submit" value="並び替え">
          </form>
       </div>
     </div>
