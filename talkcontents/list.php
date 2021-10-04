@@ -24,9 +24,16 @@ $getname=$db->prepare('SELECT * FROM categories WHERE id=?');
 $getname->execute(array($category_id));
 $category_data=$getname->fetch();
 
+//並び替えの種類
 if(!empty($_POST["sort"])){
     h($sort=$_POST["sort"]);
 }
+
+//検索する文字列
+if(!empty($_POSR["search"])){
+    h($search=$_POST["search"]);
+}
+$search = "%".$search."%";
 
 //アイディア数取得
 $getcount=$db->prepare('SELECT count(*) as cnt FROM ideas WHERE category_id=? AND member_id=?');
@@ -71,6 +78,11 @@ if($sort){
 }else{
     $category_contents=$db->prepare("SELECT * FROM ideas WHERE category_id=? AND member_id=? ORDER BY created DESC LIMIT $startdisp , 5");
     $category_contents->execute(array($category_id,$member_id));
+}
+
+if($search){
+    $category_contents=$db->prepare("SELECT * FROM ideas WHERE category_id=? AND member_id=? title LIKE ? ORDER BY created DESC LIMIT $startdisp , 5");
+    $category_contents->execute(array($category_id,$member_id,$search));
 }
 
 $ideas=$category_contents->fetchAll();
@@ -120,6 +132,11 @@ $good_records=$getgood->fetchAll();
                 <option value="modified" <?= $sort != 'modified' ?: 'selected' ?>>更新順</option>
             </select>
             <input type="submit" value="並び替え">
+         </form>
+          
+         <form action="./list.php?category=<?php echo $category_id?>" method="post">
+            <input type="text" name="search"　maxlength="10" placeholder="タイトルを検索">
+            <input type="submit" value="検索">
          </form>
       </div>
     </div>
