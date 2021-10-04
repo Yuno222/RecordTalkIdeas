@@ -162,7 +162,7 @@ $good_records=$getgood->fetchAll();
             </div>
             <?php endif?>
         
-          <?php else?>
+          <?php else:?>
             <div class="idea-info">
               <dt><a href="./view/index.php?category=<?php echo $category_id."&idea=".$idea["id"]?>"><?php echo $idea["title"]?></a>
                 <div class="evaluation-button" data-idea_id="<?=$idea["id"]?>">
