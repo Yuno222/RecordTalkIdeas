@@ -32,6 +32,7 @@ if(!empty($_POST["sort"])){
 //検索する文字列
 if(!empty($_POST["search"])){
     $search=h($_POST["search"]);
+    echo $search;
 }
 
 //アイディア数取得
