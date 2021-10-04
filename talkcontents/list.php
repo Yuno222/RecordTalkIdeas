@@ -140,7 +140,7 @@ $good_records=$getgood->fetchAll();
       <dl>
         <?php foreach($ideas as $idea):?>
         
-          <?php if($sort):?>
+          <?php if($search):?>
             <?php if(strpos($idea["title"],$search) !== false)?>
               <div class="idea-info">
               <dt><a href="./view/index.php?category=<?php echo $category_id."&idea=".$idea["id"]?>"><?php echo $idea["title"]?></a>
@@ -181,6 +181,8 @@ $good_records=$getgood->fetchAll();
                 <a href="./create.php?category=<?=$category_id?>&id=<?=$idea["id"]?>&state=delete" onclick="return delete_alert()">消去</a>
               </dd>
             </div>
+            <?php endif?>
+        
         <?php endforeach?>
       </dl>
     </div>
