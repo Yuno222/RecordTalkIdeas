@@ -32,7 +32,10 @@ if(!empty($_POST["sort"])){
 //検索する文字列
 if(!empty($_POST["search"])){
     $search=h($_POST["search"]);
-    echo $search;
+    $abc="abc";
+    if(strpos($abc,$search) !== false){
+      echo "yes";
+    }
 }
 
 //アイディア数取得
@@ -139,7 +142,6 @@ $good_records=$getgood->fetchAll();
       <dl>
         <?php foreach($ideas as $idea):?>
         
-                <?php echo $search;?>
                 <div class="idea-info">
                   <dt><a href="./view/index.php?category=<?php echo $category_id."&idea=".$idea["id"]?>"><?php echo $idea["title"]?></a>
                     <div class="evaluation-button" data-idea_id="<?=$idea["id"]?>">
