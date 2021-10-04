@@ -157,6 +157,29 @@ $good_records=$getgood->fetchAll();
                 </dd>
               </div>
         
+            
+        
+              <div class="idea-info">
+                <dt><a href="./view/index.php?category=<?php echo $category_id."&idea=".$idea["id"]?>"><?php echo $idea["title"]?></a>
+                  <div class="evaluation-button" data-idea_id="<?=$idea["id"]?>">
+                    <span class="good fa fa-thumbs-up">
+                      <?php foreach($good_records as $good_record):?>
+                        <?php if($idea["id"]===$good_record["idea_id"]):?>
+                          <?php echo $good_record["good_num"]?>
+                        <?php endif?>
+                      <?php endforeach?>
+                    </span>
+                  </div>
+                </dt>
+                <dd>自己評価：<?php echo $idea["self_evaluate"]?>/5</dd>
+                <dd>作成日：<?php echo $idea["created"]?>
+                  <a href="./create.php?category=<?=$category_id?>&id=<?=$idea["id"]?>&state=edit">編集</a>
+                  <a href="./create.php?category=<?=$category_id?>&id=<?=$idea["id"]?>&state=delete" onclick="return delete_alert()">消去</a>
+                </dd>
+              </div>
+        
+        
+        
         <?php endforeach?>
       </dl>
     </div>
