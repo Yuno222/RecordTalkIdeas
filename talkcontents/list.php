@@ -32,7 +32,6 @@ if(!empty($_POST["sort"])){
 //検索する文字列
 if(!empty($_POSR["search"])){
     $search=h($_POST["search"]);
-    $search = "%".$search."%";
 }
 
 //アイディア数取得
@@ -78,11 +77,6 @@ if($sort){
 }else{
     $category_contents=$db->prepare("SELECT * FROM ideas WHERE category_id=? AND member_id=? ORDER BY created DESC LIMIT $startdisp , 5");
     $category_contents->execute(array($category_id,$member_id));
-}
-
-if($search){
-    $category_contents=$db->prepare("SELECT * FROM ideas WHERE category_id=? AND member_id=? title LIKE ? ORDER BY created DESC LIMIT $startdisp , 5");
-    $category_contents->execute(array($category_id,$member_id,$search));
 }
 
 $ideas=$category_contents->fetchAll();
@@ -145,24 +139,48 @@ $good_records=$getgood->fetchAll();
       <div class="container">
       <dl>
         <?php foreach($ideas as $idea):?>
-          <div class="idea-info">
-            <dt><a href="./view/index.php?category=<?php echo $category_id."&idea=".$idea["id"]?>"><?php echo $idea["title"]?></a>
-              <div class="evaluation-button" data-idea_id="<?=$idea["id"]?>">
-                <span class="good fa fa-thumbs-up">
-                  <?php foreach($good_records as $good_record):?>
-                    <?php if($idea["id"]===$good_record["idea_id"]):?>
-                      <?php echo $good_record["good_num"]?>
-                    <?php endif?>
-                  <?php endforeach?>
-                </span>
-              </div>
-            </dt>
-            <dd>自己評価：<?php echo $idea["self_evaluate"]?>/5</dd>
-            <dd>作成日：<?php echo $idea["created"]?>
-              <a href="./create.php?category=<?=$category_id?>&id=<?=$idea["id"]?>&state=edit">編集</a>
-              <a href="./create.php?category=<?=$category_id?>&id=<?=$idea["id"]?>&state=delete" onclick="return delete_alert()">消去</a>
-            </dd>
-          </div>
+        
+          <?php if($sort):?>
+            <?php if(strpos($idea["title"],$search) !== false)?>
+              <div class="idea-info">
+              <dt><a href="./view/index.php?category=<?php echo $category_id."&idea=".$idea["id"]?>"><?php echo $idea["title"]?></a>
+                <div class="evaluation-button" data-idea_id="<?=$idea["id"]?>">
+                  <span class="good fa fa-thumbs-up">
+                    <?php foreach($good_records as $good_record):?>
+                      <?php if($idea["id"]===$good_record["idea_id"]):?>
+                        <?php echo $good_record["good_num"]?>
+                      <?php endif?>
+                    <?php endforeach?>
+                  </span>
+                </div>
+              </dt>
+              <dd>自己評価：<?php echo $idea["self_evaluate"]?>/5</dd>
+              <dd>作成日：<?php echo $idea["created"]?>
+                <a href="./create.php?category=<?=$category_id?>&id=<?=$idea["id"]?>&state=edit">編集</a>
+                <a href="./create.php?category=<?=$category_id?>&id=<?=$idea["id"]?>&state=delete" onclick="return delete_alert()">消去</a>
+              </dd>
+            </div>
+            <?php endif?>
+        
+          <?php else?>
+            <div class="idea-info">
+              <dt><a href="./view/index.php?category=<?php echo $category_id."&idea=".$idea["id"]?>"><?php echo $idea["title"]?></a>
+                <div class="evaluation-button" data-idea_id="<?=$idea["id"]?>">
+                  <span class="good fa fa-thumbs-up">
+                    <?php foreach($good_records as $good_record):?>
+                      <?php if($idea["id"]===$good_record["idea_id"]):?>
+                        <?php echo $good_record["good_num"]?>
+                      <?php endif?>
+                    <?php endforeach?>
+                  </span>
+                </div>
+              </dt>
+              <dd>自己評価：<?php echo $idea["self_evaluate"]?>/5</dd>
+              <dd>作成日：<?php echo $idea["created"]?>
+                <a href="./create.php?category=<?=$category_id?>&id=<?=$idea["id"]?>&state=edit">編集</a>
+                <a href="./create.php?category=<?=$category_id?>&id=<?=$idea["id"]?>&state=delete" onclick="return delete_alert()">消去</a>
+              </dd>
+            </div>
         <?php endforeach?>
       </dl>
     </div>
