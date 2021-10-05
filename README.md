@@ -43,11 +43,11 @@ OS : mac
 - いいね機能(ajax)  
 - レスポンシブデザイン  
 ## 〇使用した技術
-・PHP  
+・PHP(ver.8.0.0)  
 ・Ajax  
-・javaScript（jQuery）  
+・javaScript   
 ・HTML、CSS  
-・MySQL  
+・MySQL(ver.5.7.30)  
 <br/>
 ## 〇サイト構成
 ログイン画面(ログイン、新規登録)　  
