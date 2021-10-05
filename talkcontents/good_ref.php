@@ -2,7 +2,7 @@
 require("../dbconnect.php");
 require("../function.php");
 
-logincheck();
+login_check();
 
 if(!empty($_POST["idea_id"])){
     $idea_id=$_POST["idea_id"];
