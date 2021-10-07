@@ -11,6 +11,7 @@ require("../function.php");
 //ログイン状態をチェック
 login_check();
 
+//カテゴリーをデータベースから取得(新規追加、消去、編集できるようにせんとな〜)
 $categories=$db->query('SELECT * FROM categories');
 ?>
 
