@@ -18,7 +18,7 @@ if(isset($_COOKIE["auto_login"])){
   $auto_login->execute(array(h($_COOKIE["auto_login"])));
   $auto_login_info=$auto_login->fetch();
   
-  //自動ログイントークンが一致したとき
+  //自動ログイントークンが一致したとき、セッションidを更新して、ログイン保持の情報をセッションに保存
   if($auto_login_info){
     session_regenerate_id(true);
     $_SESSION["user_id"]=$auto_login_info["user_id"];
