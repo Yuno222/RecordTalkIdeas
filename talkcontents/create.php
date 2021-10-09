@@ -5,6 +5,7 @@ require('../dbconnect.php');
 //ログイン状態をチェック
 login_check();
 
+//categoryかstateが空白だったら
 if(empty($_GET["category"])||empty($_GET["state"])){
     header("Location:./index.php");
 }
