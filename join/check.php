@@ -1,10 +1,7 @@
 <?php 
-    function h($str){
-        return htmlspecialchars($str,ENT_QUOTES,"UTF-8");
-    }
-
-    session_start();
+    require('../function.php');
     require('../dbconnect.php');
+    
     
     //クリックジャッキング対策
     header("X-FRAME-OPTIONS: DENY");
