@@ -1,4 +1,5 @@
 <?php 
+//データベース接続
  try{
     $db=new PDO('mysql:dbname=heroku_eccbca177deccc9;host=us-cdbr-east-02.cleardb.com;charset=utf8','bfb8515b7d9ba3','5734eda5',
   [
