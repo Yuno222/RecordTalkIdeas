@@ -6,7 +6,7 @@
 サーバーサイドは、PHP使ってコーディングしました。  
 基礎を学ぶために、今回はフレームワークを使わずに開発しました。
 
-**RecordTalkIdeas**はこちらから閲覧できます。  
+**RecordTalkIdeas**はこちらから閲覧できます。（DB弄ってたら接続エラーになったので対応中です。。。）  
 ↓↓↓  
 https://recordtalkideas.herokuapp.com  
 
