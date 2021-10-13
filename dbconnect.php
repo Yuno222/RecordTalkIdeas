@@ -1,7 +1,8 @@
 <?php 
+mysql://b8b40044c2ac91:74a080df@us-cdbr-east-04.cleardb.com/heroku_31c35d343b1c7a6?reconnect=true
 //データベース接続
  try{
-    $db=new PDO('mysql:dbname=heroku_eccbca177deccc9;host=us-cdbr-east-02.cleardb.com;charset=utf8','bfb8515b7d9ba3','5734eda5',
+    $db=new PDO('mysql:dbname=heroku_31c35d343b1c7a6;host=us-cdbr-east-04.cleardb.com;charset=utf8','b8b40044c2ac91','74a080df',
   [
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //連想配列
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, //例外
