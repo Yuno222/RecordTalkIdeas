@@ -1,5 +1,4 @@
 <?php 
-mysql://b8b40044c2ac91:74a080df@us-cdbr-east-04.cleardb.com/heroku_31c35d343b1c7a6?reconnect=true
 //データベース接続
  try{
     $db=new PDO('mysql:dbname=heroku_31c35d343b1c7a6;host=us-cdbr-east-04.cleardb.com;charset=utf8','b8b40044c2ac91','74a080df',
