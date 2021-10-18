@@ -1,6 +1,6 @@
 <script>
   function delete_alert(){
-   return confirm("本当に消去してもよろしいですか？")
+   return confirm("本当に消去してもよろしいですか？");
   }
 </script>
 
