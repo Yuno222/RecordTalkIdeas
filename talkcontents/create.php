@@ -1,5 +1,5 @@
 <?php
-require('../function.php');
+require('../function.php')
 require('../dbconnect.php');
 
 //ログイン状態をチェック
